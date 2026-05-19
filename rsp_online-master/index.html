@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSP Game Multiplayer</title>
+    <link rel="icon" href="./assets/img/icon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <section id="login" class="Form my-4 mx-3">
+        <div class="container-fluid" style="width: 85%; margin: 0 auto;">
+            <div class="row g-0">
+                <div class="col-lg-5 left-img">
+                    <img src="./assets/img/bg1.jpg" class="img-fluid" alt="image">
+                </div>
+                <div class="col-lg-7 px-5 pt-5">
+                    <div class="logo">
+                        <img src="./assets/img/ar.png" class="py-3" alt="logo">
+                    </div>
+                    <h4 class="fw-bold">Sign into your account</h4>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-lg-7 inputs mail-div">
+                                <input type="email" class="inpt-email form-control my-3 p-3" placeholder="Email-Adress">
+                                <span id="email-msg"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7 inputs password-div">
+                                <input type="password" class="inpt-password form-control my-3 p-3" placeholder="******">
+                                <span id="password-msg"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7 inputs">
+                                <button type="button" class="btn-login mt-2 mb-4">Login</button>
+                            </div>
+                        </div>
+                        <a href="#">Forget Password</a>
+                        <p>Don't have an account? <a id="go-register">Register here</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="Form my-4 mx-3">
+        <div class="container-fluid mx-auto" style="width: 85%;">
+            <div class="row g-0">
+                <div class="col-lg-6 px-3 pt-2 d-flex flex-column align-items-center">
+                    <div class="logo">
+                        <img src="./assets/img/ar.png" class="py-2" alt="logo">
+                    </div>
+                    <h4 class="fw-bold">Signup your account!</h4>
+                    <form class="register-form">
+                        <div class="inputs reg-mail-div w-100">
+                            <input type="email" class="inpt-reg-email form-control my-3 p-3" placeholder="Email-Adress">
+                            <span id="reg-email-msg"></span>
+                        </div>
+                        <div class="inputs reg-username-div w-100">
+                            <input type="text" class="inpt-reg-username form-control my-3 p-3" placeholder="Username">
+                            <span id="reg-username-msg"></span>
+                        </div>
+                        <div class="inputs reg-password-div w-100">
+                            <input type="password" class="inpt-reg-password1 form-control my-3 p-3" placeholder="******">
+                            <span id="reg-password-msg"></span>
+                        </div>
+                        <div class="inputs w-75 mx-auto">
+                            <button type="button" class="btn-register mt-2 mb-4">Sign Up</button>
+                        </div>
+                        <p class="text-center">Have an account? <a id="go-login">Login here</a></p>
+                    </form>
+                </div>
+                <div class="col-lg-6 right-img">
+                    <img src="./assets/img/bg2.jpg" class="img-fluid" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="game">
+        <div class="container-fluid">
+            <div class="signout">
+                <h3 class="link-signout">Sign out <i class="fas fa-sign-out-alt ms-1"></i></h3>
+            </div>
+            <div class="game-container mx-auto">
+                <h1 class="text-center mb-5 txt-welcome">Welcome, Player</h1>
+                <button class="btn-join my-3 mt-4">Join Room <i class="fas fa-sign-in-alt ms-1"></i></button>
+                <div class="div-join">
+                    <input class="inpt-join my-3 mt-4" type="text" placeholder="Type Room number">
+                    <button class="btn-join-show my-3 mt-4"><i class="fas fa-sign-in-alt"></i></button>
+                </div>
+                <button class="btn-create my-3">Create a new Room <i class="fas fa-plus ms-1"></i></button>
+                <div class="div-create">
+                    <input class="inpt-create my-3 mt-4" type="text" placeholder="Create Room number">
+                    <button class="btn-create-show my-3 mt-4"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="./assets/js/firebase.js"></script>
+    <!-- Jquery and Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="./assets/js/show-hide.js"></script>
+    <script src="./assets/js/validation.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

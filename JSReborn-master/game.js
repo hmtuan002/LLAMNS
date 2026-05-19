@@ -1,4 +1,4 @@
-  var database = new Firebase('YOUR FIREBASE URL'),
+  var database = new Firebase('vvss-b7a49.firebaseapp.com'),
   players = database.child('players'),
   amOnline = database.child('.info/connected'),
   chatRef = database.child('chat'),
